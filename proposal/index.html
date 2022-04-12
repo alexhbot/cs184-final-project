@@ -21,38 +21,35 @@
 </head>
 <body>
 
-<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2022</h1>
-<br><br>
-<h1 align="middle">Final Project Proposal: Realistic Lens Simulation</h1>
-<br><br>
+<h2 align="middle">CS 184 Final Project Proposal | Spring 2022 </h2>
+    <!-- <h3 align="middle">Published at: https://alexhbot.github.io/cs184-final-project/</h3> -->
 
-    <br>
-    <h2 align="middle">Published at: https://alexhbot.github.io/cs184-final-project/</h2>
-    <br>
-    
-    <h2 align="middle">Team Members</h2>
-    <p align="middle">Alex Hao</p>
+    <h1 align="middle"> Realistic Lens Simulation </h1>
+    <!-- <p align="middle">Alex Hao</p>
     <p align="middle">Arthur Yin</p>
     <p align="middle">Cindy Chen</p>
-    <p align="middle">Hanchen Wang</p>
-
+    <p align="middle">Hanchen Wang</p> -->
+    <p align="middle">Alex Hao, Arthur Yin, Cindy Chen, Hanchen Wang</p>
     <br><br>
 
     <div>
 
     <h2 align="middle">Summary</h2>
-    <p> We will implement an existing multi-element zoom lens design in the pathtracer, with single-point contrast-detection autofocus. We can then show interesting cinematic effects that come with the optical design, such as lens flare and chromatic aberration. </p>
-    
-    <br><br>
-    
+    <p> In this final project, we will implement an existing multi-element zoom lens design in the pathtracer,
+      with single-point contrast-detection autofocus. We can then show interesting cinematic
+      effects that come with the optical design, such as lens flare and chromatic aberration. This can be an
+    interesting extension of the pin-hole camera we implemented ealier. </p>
+
+    <br>
+
     <h2 align="middle">Problem Description</h2>
     <p> In cinematography, it is important to simulate a specific lens so that a computer-rendered scene visually matches the real-world scenes shot with the actual lens; this includes matching all optical characteristics of that lens, and the easiest method is to simulate the physical design and ray-trace through the elements. Simulating the optical design is also useful from an engineering standpoint, since it provides insights of the performance of the lens before production. </p>
     <p> We will be using an existing optical design from a renowned manufacturer that has its full specification published, including the geometry and index of refraction of each element. The lens will have mutiple elements divided into groups, and it will be a zoom lens with variable focal length. At least one of the groups controls the focal length, and at least one other group controls the focus. By controlling the position of these groups of elements, we can change the focal length and the focus distance. The focal length can be controlled by the user via the GUI, and focusing is done automatically. The specific lens design and range of focal length is TBD, but it will be from Zeiss or Canon, and will be around 24mm to 70mm. The challenge here is finding a source with enough technical details, and getting the focal length adjustment correct can be tricky as well. </p>
     <p> We will have a focus point based on an contrast-detection algorithm. The algorithm should examine the area covered by the focus point, decide the amount of adjustment needed to make that area in-focus, and apply that adjustment automatically. The chanllenge here is making the algorithm both efficient and have a high success rate. We don't expect the auto focus to be successful every single time, since real life implementations also fail from time to time. </p>
     <p> We will be using the pathtracer from project 3, which is probably good enough, but if it turns out to be insufficient for our needs, we may use another framwork to implement the lens. </p>
-    
-    <br><br>
-    
+
+    <br>
+
     <h2 align="middle">Goals and Deliverables</h2>
     <p> Here is what we plan to deliver: </p>
     <p> 1. By controlling specific groups of elements with GUI inputs, we can change the focal length of the lens, then we will render the same scene with different focal length and compare the visual effects of wide-angle vs telephoto without changing the position of the subject. </p>
@@ -61,34 +58,36 @@
     <p> 1. By not implementing any kind of coating on the elements, we will simulate extreme lens flares by appropriately positioning the light source. </p>
     <p> 2. By configuring the lens elements with their realistic chromatic aberration parameters, we can demostrate "purple fringing" with images of bright parts of the scene. </p>
     <p> 3. Additionally, we may observe that different focal lengths have different distortion characteristics, thus we can show the disadvantges of this lens design in terms of image quality consistency. </p>
-    
-    
-    <br><br>
-    
+
+
+    <br>
+
     <h2 align="middle">Schedule</h2>
-    <p> Week of 4/11 to 4/17: </p>
-    <p> 1. Research the available lens designs and discuss to decide on one with appropriate complexity.</p>
-    <p> 2. All members review part 4 of project 3-2 and use that as a starting point. </p>
-    <p> 3. Encode all lens elements. </p>
+    <b> <p> Week of 4/11 to 4/17: </p> </b>
+    <p> &emsp;1. Research the available lens designs and discuss to decide on one with appropriate complexity.&ensp;</p>
+    <p> &emsp;2. All members review part 4 of project 3-2 and use that as a starting point.&ensp; </p>
+    <p> &emsp;3. Encode all lens elements. Explore on necessary equations. &ensp;</p>
     <p> Week of 4/18 to 4/24:  </p>
-    <p> 1. Implement lens zoom. </p>
-    <p> 2. Update GUI to accommodate lens zoom parameters. </p>
-    <p> 3. All members reasearch the principles of contrast-detection auto focus and its implementations. </p>
+    <p> &emsp;1. Implement lens zoom. &ensp;</p>
+    <p> &emsp;2. Update GUI to accommodate lens zoom parameters. &ensp;</p>
+    <p> &emsp;3. All members reasearch the principles of contrast-detection auto focus and its implementations. &ensp;</p>
     <p> Week of 4/25 to 5/1:  </p>
-    <p> 1. Milestone on 4/26. </p>
-    <p> 2. Implement auto focus. </p>
-    <p> 3. Add chromatic aberration parameters to lens elements. </p>
+    <p> &emsp;1. Milestone on 4/26. &ensp;</p>
+    <p> &emsp;2. Implement auto focus. &ensp;</p>
+    <p> &emsp;3. Add chromatic aberration parameters to lens elements. &ensp;</p>
     <p> Week of 5/2 to 5/5:  </p>
-    <p> 1. Make presentation. </p>
-    <p> 2. Final presentation on 5/5. </p>
-    <p> 3. Finalize report and other deliverables. </p>
-    
-    <br><br>
-    
+    <p> &emsp;1. Make presentation.&ensp; </p>
+    <p> &emsp;2. Final presentation on 5/5. &ensp;</p>
+    <p> &emsp;3. Finalize report and other deliverables.&ensp; </p>
+
+    <br>
+
     <h2 align="middle">Resources</h2>
-    <p> 1. Specific lens design TBD, but the following website may be useful to look into. </p>
+    <p> Specific lens design TBD, but the following website may be useful to look into. </p>
     <p> https://www.lens-designs.com/ </p>
-    
+    <p> https://www.usa.canon.com/internet/portal/us/home/support/self-help-center/eos-webcam-utility </p>
+    <p> https://www.cs.utexas.edu/~fussell/courses/cs395t/lens.pdf </p>
+
 </div>
 </body>
 </html>
