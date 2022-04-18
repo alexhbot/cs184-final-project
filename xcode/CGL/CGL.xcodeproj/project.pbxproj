@@ -1,0 +1,1644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		516A1EFE2C8C409D949F4E84 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 95CCC3FC22284C2CAF7899E1 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				AC676DBC3A5C0456D64BD647 /* Generate deps/glfw/CMakeFiles/uninstall */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		A4E48F828FB2441FB2BA5A00 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3F1BB3843DA943AEA0D5F856 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				D7273F4C2A4A349EC97D0068 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				75F0966786354E88B311178E /* PBXTargetDependency */,
+				A70E6EE1D9674E80BE2C5EE2 /* PBXTargetDependency */,
+				8311EA5B27424271815ADAD1 /* PBXTargetDependency */,
+				611CC591E0E84072B8A98193 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C6B6329396E14EF0A6A1D82F /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A9564771D59483690E5F07C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				0F1D783667E81D2F78381BE2 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		D2B7C987A45A48EBA93337A0 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CD0A45D9F3364C85B61346A0 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				FFCB7775FDB7409D9B47628C /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		00C0B0003AB34FDFA0602FFD /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/lodepng.cpp */ = {isa = PBXBuildFile; fileRef = 94F51DC8F23A4B2E9B56CB72 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/lodepng.cpp */; };
+		0900BB3871414266AFB95B51 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CC69DFD082574D018C566CDE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/CMakeLists.txt */; };
+		1D4ECBA4168D49969323BCFF /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = 935AD37B470F425B8BEFC34D /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glew.c */; };
+		20B8F84B7B354D09AB9CF0E0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/base64.cpp */ = {isa = PBXBuildFile; fileRef = 9929468000054CAFB2544C2A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/base64.cpp */; };
+		212A59C6C9864CFEB49240C9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = FF8579CAF2434F4290C2DB89 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		38084763DF0D4274A8711363 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = A01B2766E9EC45059DE34C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.h */; };
+		3840C49F80514184A69E81A4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 1A00AAABFE0D44ED878B0C73 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.h */; };
+		3E33AC865776466EAD2CAD50 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 35783BA43F534164A763FB77 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.h */; };
+		40FA17C5D3444FE3BCF93E49 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 7EA982C50C52475D93CD0A65 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.c */; };
+		469D2FB3654446CDB7EA65CB /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXBuildFile; fileRef = C9C4965A56384B22847E14B4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/visualinfo.c */; };
+		4C19FC890A334DAE8B8CCEA4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 1D8BFB5AA3C643C696FE1EB9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/mappings.h */; };
+		5565BFCE2F134E11AA9CD9D1 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 8938078F7421472981910E25 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_window.m */; };
+		62DDA7807A8F44C19032B835 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 457773984BC94A6D81D5CD66 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		71B5D569205346439E0EDDDE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXBuildFile; fileRef = C39BC415F4224E67B40539A4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glewinfo.c */; };
+		7426AB19E58B4A1C8B587E00 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 59D637150F07419880D85A9B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_init.m */; };
+		751CA4844AA7499D8337E1EA /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/color.cpp */ = {isa = PBXBuildFile; fileRef = 9DE669E293A94DB083973520 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/color.cpp */; };
+		76A4A85598B743BEB66F68ED /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 2AAA86811BD14EF1890057C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/internal.h */; };
+		7964D5976AFB412EB4152173 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = CFB2E4A47E2D4F4DBEC3E2C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.m */; };
+		7A1D741BE11748F5868E03AE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 1172F6BD8CF141749D006291 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3native.h */; };
+		7AB1D03E766D48E785D7EB77 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = A197927FF3FD476B9A2969CD /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_platform.h */; };
+		7BDAECBDC9B848B6935477D0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector2D.cpp */ = {isa = PBXBuildFile; fileRef = 12D37BD344424ADB8E93EA4F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector2D.cpp */; };
+		7D38736B2536418AA32D32B3 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix3x3.cpp */ = {isa = PBXBuildFile; fileRef = 44DD7C5DB61246B9949C04C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix3x3.cpp */; };
+		860AC03A565E4743BD993744 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = A32B40730C9F4E7495CCB590 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.h */; };
+		8B10DA2883A14A4FAA5072AC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = 0581CCDEB12D4287BC33E589 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/tinyxml2.cpp */; };
+		8E6F1C3732674C9BAE1D459F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/path.cpp */ = {isa = PBXBuildFile; fileRef = E460DFD0B5C846368ABBE374 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/path.cpp */; };
+		9C5902D15EC641F384788518 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = B8D068C9280A4F47B56F97CF /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		A14F9F89ACF0428E98691FF1 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/complex.cpp */ = {isa = PBXBuildFile; fileRef = D454607D77C94A449D529C46 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/complex.cpp */; };
+		A1DD78968E9F4527B81BD872 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector4D.cpp */ = {isa = PBXBuildFile; fileRef = 93480B6556454E7CB0AB2519 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector4D.cpp */; };
+		A7C5A28CB17D4BD48C6E9760 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdfont.cpp */ = {isa = PBXBuildFile; fileRef = B0878E3E93C246AB9864C966 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdfont.cpp */; };
+		B066D347E2D7479DB4228C02 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 9758EEC3C56C4FF29B80A49B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		B4C114D982914FDCB45450CC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector3D.cpp */ = {isa = PBXBuildFile; fileRef = 8291D5085DF24801AAAD65C4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector3D.cpp */; };
+		B81BBABF32E449C8B8FDB8E4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6E1E837116A840E994B26C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */; };
+		BF879F7B56FE431C8C1A8C08 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/quaternion.cpp */ = {isa = PBXBuildFile; fileRef = FAF7D3A12AC44FBFAD04733A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/quaternion.cpp */; };
+		C237508407134BDEA8A42175 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5D673CD26D3F4773B8139FAB /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/CMakeLists.txt */; };
+		CB60BDF9951B49BAB56F39CF /* /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 3C002DA1B73B4501AE0414C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/glfw_config.h */; };
+		CF5ABDDF5BD44B61A0123E3D /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdtext.cpp */ = {isa = PBXBuildFile; fileRef = 4094D96E0E9545269397A821 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdtext.cpp */; };
+		D406E647A9C64326A08F42AE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 847906C523654DE186260046 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		DA43557D21D64AF89A67E7EA /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 567A6283B1B64B228BBFDB95 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		DBE0C23AEC1D4078A271EBC3 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 6256C25EE4FB48C2B52AE5B6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		DC32257FA5E54A8C874F89F0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix4x4.cpp */ = {isa = PBXBuildFile; fileRef = 5F3581D998B647C094521E2E /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix4x4.cpp */; };
+		DF10A689B42D4CBDAD1ADF77 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = 10A62C44B8784C59842389CE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.h */; };
+		DFB709DE7E65409193D9E568 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = DD0F58DF0BD24A17B1F6C6D0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.m */; };
+		E30BE1F39B6346FA8FDBB68F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 7448C3001AF345BFA25DA175 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		E9CAF2E1F75A4EBDB573D9A0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 5E8311594D39461B8149746A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3.h */; };
+		ECF0B292E25248159A870EFC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 423804344499406589CFB835 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_time.c */; };
+		F04B96FBE927472591AB664E /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/viewer.cpp */ = {isa = PBXBuildFile; fileRef = 74AFB7DFC4234A9F93C25254 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/viewer.cpp */; };
+		F1CECBD34163489E9BB6F914 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = A90485653B2043FA90ED5A20 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_monitor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		30DE5C4D177747E29884DDC5 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		62A5EA1971C44A3C9947E347 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		7BC5C24C170A437AAFCDB9F8 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		B8A967307138404C9E8B012C /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		141FFF62CDA545D8B0805376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E65F200289C4CE487673DC5;
+			remoteInfo = glfw;
+		};
+		301FBA2BB0E749E8AEC3621A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E48F828FB2441FB2BA5A00;
+			remoteInfo = ALL_BUILD;
+		};
+		3E9BE7F56E254559A1B30DB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E8E411D3094DF5B385ED41;
+			remoteInfo = glew;
+		};
+		6E68DB0832754DEA99662F6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E8E411D3094DF5B385ED41;
+			remoteInfo = glew;
+		};
+		8BBC505155D64B09AA9E88A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E65F200289C4CE487673DC5;
+			remoteInfo = glfw;
+		};
+		8C83C91C1C064824A791FE48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F68741F48BE4298A01FBC9C;
+			remoteInfo = CGL;
+		};
+		9351E9E5B2E64602AC7B2828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6B6329396E14EF0A6A1D82F;
+			remoteInfo = ZERO_CHECK;
+		};
+		EE25A380DE1640C7BCD12985 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D94F7B46DCB942EFBC739049 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6B6329396E14EF0A6A1D82F;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0581CCDEB12D4287BC33E589 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		10A62C44B8784C59842389CE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = deps/glfw/src/egl_context.h; sourceTree = SOURCE_ROOT; };
+		1172F6BD8CF141749D006291 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = deps/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		12D37BD344424ADB8E93EA4F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector2D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector2D.cpp; path = src/vector2D.cpp; sourceTree = SOURCE_ROOT; };
+		1A00AAABFE0D44ED878B0C73 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = deps/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		1D8BFB5AA3C643C696FE1EB9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = deps/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
+		2AAA86811BD14EF1890057C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = deps/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		35783BA43F534164A763FB77 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = deps/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		3C002DA1B73B4501AE0414C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../xcode/CGL/deps/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		4094D96E0E9545269397A821 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdtext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdtext.cpp; path = src/osdtext.cpp; sourceTree = SOURCE_ROOT; };
+		423804344499406589CFB835 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = deps/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		44DD7C5DB61246B9949C04C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix3x3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix3x3.cpp; path = src/matrix3x3.cpp; sourceTree = SOURCE_ROOT; };
+		457773984BC94A6D81D5CD66 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = deps/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		45F72E468CD24E92B22B9CD6 /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		487B006D2BBB49058D420C73 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		567A6283B1B64B228BBFDB95 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = deps/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		59D637150F07419880D85A9B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = deps/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		5D673CD26D3F4773B8139FAB /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5E8311594D39461B8149746A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = deps/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		5F3581D998B647C094521E2E /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix4x4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix4x4.cpp; path = src/matrix4x4.cpp; sourceTree = SOURCE_ROOT; };
+		6256C25EE4FB48C2B52AE5B6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = deps/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		6E1E837116A840E994B26C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7448C3001AF345BFA25DA175 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = deps/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		74AFB7DFC4234A9F93C25254 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/viewer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = viewer.cpp; path = src/viewer.cpp; sourceTree = SOURCE_ROOT; };
+		7EA982C50C52475D93CD0A65 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = deps/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		8291D5085DF24801AAAD65C4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3D.cpp; path = src/vector3D.cpp; sourceTree = SOURCE_ROOT; };
+		83C1159D96AF4EBB83F2ADB2 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		847906C523654DE186260046 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = deps/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		8938078F7421472981910E25 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = deps/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		93480B6556454E7CB0AB2519 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector4D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector4D.cpp; path = src/vector4D.cpp; sourceTree = SOURCE_ROOT; };
+		935AD37B470F425B8BEFC34D /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = deps/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		94F51DC8F23A4B2E9B56CB72 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/lodepng.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lodepng.cpp; path = src/lodepng.cpp; sourceTree = SOURCE_ROOT; };
+		9758EEC3C56C4FF29B80A49B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = deps/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		9929468000054CAFB2544C2A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		9C973BE9D800428B95F300A9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9DE669E293A94DB083973520 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = color.cpp; path = src/color.cpp; sourceTree = SOURCE_ROOT; };
+		A01B2766E9EC45059DE34C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = deps/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		A197927FF3FD476B9A2969CD /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = deps/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		A32B40730C9F4E7495CCB590 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = deps/glfw/src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		A90485653B2043FA90ED5A20 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = deps/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		B0878E3E93C246AB9864C966 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdfont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdfont.cpp; path = src/osdfont.cpp; sourceTree = SOURCE_ROOT; };
+		B8D068C9280A4F47B56F97CF /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = deps/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		C1802A775E6647E2A43D523A /* CGL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCGL.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39BC415F4224E67B40539A4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glewinfo.c; path = deps/glew/src/glewinfo.c; sourceTree = SOURCE_ROOT; };
+		C9C4965A56384B22847E14B4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = visualinfo.c; path = deps/glew/src/visualinfo.c; sourceTree = SOURCE_ROOT; };
+		CC69DFD082574D018C566CDE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CFB2E4A47E2D4F4DBEC3E2C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = deps/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		D454607D77C94A449D529C46 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/complex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complex.cpp; path = src/complex.cpp; sourceTree = SOURCE_ROOT; };
+		DD0F58DF0BD24A17B1F6C6D0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = deps/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		E460DFD0B5C846368ABBE374 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = src/path.cpp; sourceTree = SOURCE_ROOT; };
+		FAF7D3A12AC44FBFAD04733A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/quaternion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = quaternion.cpp; path = src/quaternion.cpp; sourceTree = SOURCE_ROOT; };
+		FF8579CAF2434F4290C2DB89 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = deps/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2611C1FF143542BE89C0E459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA30E83477324873A011DC64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A4AB96B0394027835995E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E4BD87F1FF41C58BFB86FD = {
+			isa = PBXGroup;
+			children = (
+				C76B2865D4F545EA82007422 /* CGL */,
+				05631FAE0DDB45FEB43416D7 /* ALL_BUILD */,
+				889CE08904F3464AB60230BD /* glew */,
+				7BB449FF5EAA48A3A741564C /* GLFW3 */,
+				D2BF7CE8045D4F18B0A53C42 /* Products */,
+				1718D60E86DD433A92ACE6E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		05631FAE0DDB45FEB43416D7 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				D72B7C2D10A94F37B7BB42E1 /* CMake Rules */,
+				9C973BE9D800428B95F300A9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		1718D60E86DD433A92ACE6E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3892935E8B884344A320180B /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				B590BB6E66DC4A4A9BEB594E /* Header Files */,
+				66D68147D3F6407E9CAF5D12 /* Source Files */,
+				5D673CD26D3F4773B8139FAB /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		549F4F2A8838491E8127AAF6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9929468000054CAFB2544C2A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/base64.cpp */,
+				9DE669E293A94DB083973520 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/color.cpp */,
+				D454607D77C94A449D529C46 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/complex.cpp */,
+				94F51DC8F23A4B2E9B56CB72 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/lodepng.cpp */,
+				44DD7C5DB61246B9949C04C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix3x3.cpp */,
+				5F3581D998B647C094521E2E /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix4x4.cpp */,
+				B0878E3E93C246AB9864C966 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdfont.cpp */,
+				4094D96E0E9545269397A821 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdtext.cpp */,
+				E460DFD0B5C846368ABBE374 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/path.cpp */,
+				FAF7D3A12AC44FBFAD04733A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/quaternion.cpp */,
+				0581CCDEB12D4287BC33E589 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/tinyxml2.cpp */,
+				12D37BD344424ADB8E93EA4F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector2D.cpp */,
+				8291D5085DF24801AAAD65C4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector3D.cpp */,
+				93480B6556454E7CB0AB2519 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector4D.cpp */,
+				74AFB7DFC4234A9F93C25254 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/viewer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		66D68147D3F6407E9CAF5D12 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				59D637150F07419880D85A9B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_init.m */,
+				CFB2E4A47E2D4F4DBEC3E2C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.m */,
+				A90485653B2043FA90ED5A20 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_monitor.m */,
+				423804344499406589CFB835 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_time.c */,
+				8938078F7421472981910E25 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_window.m */,
+				567A6283B1B64B228BBFDB95 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/context.c */,
+				457773984BC94A6D81D5CD66 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.c */,
+				9758EEC3C56C4FF29B80A49B /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/init.c */,
+				7448C3001AF345BFA25DA175 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/input.c */,
+				6256C25EE4FB48C2B52AE5B6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/monitor.c */,
+				DD0F58DF0BD24A17B1F6C6D0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.m */,
+				B8D068C9280A4F47B56F97CF /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.c */,
+				7EA982C50C52475D93CD0A65 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.c */,
+				FF8579CAF2434F4290C2DB89 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/vulkan.c */,
+				847906C523654DE186260046 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		79F35253DBBF46B69D19F470 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				935AD37B470F425B8BEFC34D /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glew.c */,
+				C39BC415F4224E67B40539A4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glewinfo.c */,
+				C9C4965A56384B22847E14B4 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/visualinfo.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		7BB449FF5EAA48A3A741564C /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				CF01D37CEA8547A59904CBAD /* uninstall */,
+				3892935E8B884344A320180B /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		7D5734097E89479796A9CEFE /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		889CE08904F3464AB60230BD /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				79F35253DBBF46B69D19F470 /* Source Files */,
+				CC69DFD082574D018C566CDE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		B590BB6E66DC4A4A9BEB594E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E8311594D39461B8149746A /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3.h */,
+				1172F6BD8CF141749D006291 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include/GLFW/glfw3native.h */,
+				35783BA43F534164A763FB77 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.h */,
+				A197927FF3FD476B9A2969CD /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_platform.h */,
+				10A62C44B8784C59842389CE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.h */,
+				2AAA86811BD14EF1890057C6 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/internal.h */,
+				1D8BFB5AA3C643C696FE1EB9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/mappings.h */,
+				1A00AAABFE0D44ED878B0C73 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.h */,
+				A32B40730C9F4E7495CCB590 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.h */,
+				A01B2766E9EC45059DE34C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.h */,
+				3C002DA1B73B4501AE0414C7 /* /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C76B2865D4F545EA82007422 /* CGL */ = {
+			isa = PBXGroup;
+			children = (
+				549F4F2A8838491E8127AAF6 /* Source Files */,
+				6E1E837116A840E994B26C54 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/CMakeLists.txt */,
+			);
+			name = CGL;
+			sourceTree = "<group>";
+		};
+		CF01D37CEA8547A59904CBAD /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				7D5734097E89479796A9CEFE /* CMake Rules */,
+				487B006D2BBB49058D420C73 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		D2BF7CE8045D4F18B0A53C42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1802A775E6647E2A43D523A /* CGL */,
+				45F72E468CD24E92B22B9CD6 /* glew */,
+				83C1159D96AF4EBB83F2ADB2 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D72B7C2D10A94F37B7BB42E1 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E65F200289C4CE487673DC5 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EC327A20EE84777BBA9C8B9 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				C6A5A0E9A2A54A93BAF35AD2 /* Sources */,
+				2611C1FF143542BE89C0E459 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = 83C1159D96AF4EBB83F2ADB2 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F68741F48BE4298A01FBC9C /* CGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8D971401CB84839B37D01F1 /* Build configuration list for PBXNativeTarget "CGL" */;
+			buildPhases = (
+				40F639B4629A4EDFB20297CC /* Sources */,
+				E5A4AB96B0394027835995E3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3E405B4DD2247ED9AED3ABC /* PBXTargetDependency */,
+				9EA2A9BE147D4FB49ED47217 /* PBXTargetDependency */,
+				EC533E68E97B443AB6D33C83 /* PBXTargetDependency */,
+			);
+			name = CGL;
+			productName = CGL;
+			productReference = C1802A775E6647E2A43D523A /* CGL */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C0E8E411D3094DF5B385ED41 /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C644E93530A4D7B8B1252FA /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				100EEB4E425E443C881CBFF4 /* Sources */,
+				CA30E83477324873A011DC64 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glew;
+			productName = glew;
+			productReference = 45F72E468CD24E92B22B9CD6 /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D94F7B46DCB942EFBC739049 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1330;
+			};
+			buildConfigurationList = 49E313D311A241A587BC6D6D /* Build configuration list for PBXProject "CGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				62A5EA1971C44A3C9947E347 /* Debug */,
+				30DE5C4D177747E29884DDC5 /* Release */,
+				7BC5C24C170A437AAFCDB9F8 /* MinSizeRel */,
+				B8A967307138404C9E8B012C /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 00E4BD87F1FF41C58BFB86FD;
+			projectDirPath = ../../CGL;
+			projectRoot = "";
+			targets = (
+				A4E48F828FB2441FB2BA5A00 /* ALL_BUILD */,
+				8F68741F48BE4298A01FBC9C /* CGL */,
+				C6B6329396E14EF0A6A1D82F /* ZERO_CHECK */,
+				C0E8E411D3094DF5B385ED41 /* glew */,
+				8E65F200289C4CE487673DC5 /* glfw */,
+				D2B7C987A45A48EBA93337A0 /* install */,
+				516A1EFE2C8C409D949F4E84 /* uninstall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F1D783667E81D2F78381BE2 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  make -f /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  make -f /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  make -f /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  make -f /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3C8B9B9628600475EB03CBF8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		AC676DBC3A5C0456D64BD647 /* Generate deps/glfw/CMakeFiles/uninstall */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate deps/glfw/CMakeFiles/uninstall";
+			outputPaths = (
+"/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/CMakeFiles/uninstall"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -P /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -P /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -P /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw
+  /opt/homebrew/Cellar/cmake/3.22.3/bin/cmake -P /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/cmake_uninstall.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D7273F4C2A4A349EC97D0068 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100EEB4E425E443C881CBFF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4ECBA4168D49969323BCFF /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glew.c */,
+				71B5D569205346439E0EDDDE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/glewinfo.c */,
+				469D2FB3654446CDB7EA65CB /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/src/visualinfo.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40F639B4629A4EDFB20297CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B8F84B7B354D09AB9CF0E0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/base64.cpp */,
+				751CA4844AA7499D8337E1EA /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/color.cpp */,
+				A14F9F89ACF0428E98691FF1 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/complex.cpp */,
+				00C0B0003AB34FDFA0602FFD /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/lodepng.cpp */,
+				7D38736B2536418AA32D32B3 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix3x3.cpp */,
+				DC32257FA5E54A8C874F89F0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/matrix4x4.cpp */,
+				A7C5A28CB17D4BD48C6E9760 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdfont.cpp */,
+				CF5ABDDF5BD44B61A0123E3D /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/osdtext.cpp */,
+				8E6F1C3732674C9BAE1D459F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/path.cpp */,
+				BF879F7B56FE431C8C1A8C08 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/quaternion.cpp */,
+				8B10DA2883A14A4FAA5072AC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/tinyxml2.cpp */,
+				7BDAECBDC9B848B6935477D0 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector2D.cpp */,
+				B4C114D982914FDCB45450CC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector3D.cpp */,
+				A1DD78968E9F4527B81BD872 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/vector4D.cpp */,
+				F04B96FBE927472591AB664E /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/src/viewer.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6A5A0E9A2A54A93BAF35AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7426AB19E58B4A1C8B587E00 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_init.m */,
+				7964D5976AFB412EB4152173 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_joystick.m */,
+				F1CECBD34163489E9BB6F914 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_monitor.m */,
+				ECF0B292E25248159A870EFC /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_time.c */,
+				5565BFCE2F134E11AA9CD9D1 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/cocoa_window.m */,
+				DA43557D21D64AF89A67E7EA /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/context.c */,
+				62DDA7807A8F44C19032B835 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/egl_context.c */,
+				B066D347E2D7479DB4228C02 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/init.c */,
+				E30BE1F39B6346FA8FDBB68F /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/input.c */,
+				DBE0C23AEC1D4078A271EBC3 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/monitor.c */,
+				DFB709DE7E65409193D9E568 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/nsgl_context.m */,
+				9C5902D15EC641F384788518 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/osmesa_context.c */,
+				40FA17C5D3444FE3BCF93E49 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/posix_thread.c */,
+				212A59C6C9864CFEB49240C9 /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/vulkan.c */,
+				D406E647A9C64326A08F42AE /* /Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		611CC591E0E84072B8A98193 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E65F200289C4CE487673DC5 /* glfw */;
+			targetProxy = 141FFF62CDA545D8B0805376 /* PBXContainerItemProxy */;
+		};
+		75F0966786354E88B311178E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6B6329396E14EF0A6A1D82F /* ZERO_CHECK */;
+			targetProxy = 9351E9E5B2E64602AC7B2828 /* PBXContainerItemProxy */;
+		};
+		8311EA5B27424271815ADAD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0E8E411D3094DF5B385ED41 /* glew */;
+			targetProxy = 6E68DB0832754DEA99662F6C /* PBXContainerItemProxy */;
+		};
+		9EA2A9BE147D4FB49ED47217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0E8E411D3094DF5B385ED41 /* glew */;
+			targetProxy = 3E9BE7F56E254559A1B30DB8 /* PBXContainerItemProxy */;
+		};
+		A3E405B4DD2247ED9AED3ABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6B6329396E14EF0A6A1D82F /* ZERO_CHECK */;
+			targetProxy = EE25A380DE1640C7BCD12985 /* PBXContainerItemProxy */;
+		};
+		A70E6EE1D9674E80BE2C5EE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F68741F48BE4298A01FBC9C /* CGL */;
+			targetProxy = 8C83C91C1C064824A791FE48 /* PBXContainerItemProxy */;
+		};
+		EC533E68E97B443AB6D33C83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E65F200289C4CE487673DC5 /* glfw */;
+			targetProxy = 8BBC505155D64B09AA9E88A2 /* PBXContainerItemProxy */;
+		};
+		FFCB7775FDB7409D9B47628C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E48F828FB2441FB2BA5A00 /* ALL_BUILD */;
+			targetProxy = 301FBA2BB0E749E8AEC3621A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04AA9C27A61C4C12B5819E84 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		0617A81ED27340D9866381F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		17F4DA9FF58341A0BF5E6772 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/build";
+			};
+			name = Release;
+		};
+		22675CA0F242499683777591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		27856FC03F8E47399E9DAB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC     -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2C1FE4FD446E40B0B1926876 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src","/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC        -DNDEBUG -fPIC -Wall '-std=c99' ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2E528AABFC394F6AAE9DA240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src","/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC    -fPIC -Wall '-std=c99' ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		31CFD8A9442940A49AA2B39B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC     -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		50C35333A6CE4FBAAA73850B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL",/opt/homebrew/include/freetype2,"/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64 -fPIC             -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		562ACF1129D04B739B9D75BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		59AD1D7C9B444D57AD651735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL",/opt/homebrew/include/freetype2,"/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64 -fPIC          -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5DD3BE087D9248389BF011DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5EECE70B78D84938974EDBAA /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/build";
+			};
+			name = MinSizeRel;
+		};
+		5F44BC94B4D44F3D8D9A0FDD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		6213178E362C4E93B85A5B68 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL",/opt/homebrew/include/freetype2,"/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64 -fPIC          -DNDEBUG ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		62EB34838DEC4A209084D693 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7273C85486BD40BD9F28D851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		804E11F323004D6397A9473D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		899023BB16AA4B5F859F81B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/build";
+			};
+			name = Debug;
+		};
+		89F2AFE13BD6426583F4B488 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src","/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC     -DNDEBUG -fPIC -Wall '-std=c99' ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8B9D638FE4F04D77AF5AE0F7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk;
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/build";
+			};
+			name = RelWithDebInfo;
+		};
+		92636A5C4DE84C989ADC1BF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC    ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		9C5A0FAB1010432A8931BAB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H,GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/src","/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC     -DNDEBUG -fPIC -Wall '-std=c99' ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		AAACBB554A5A4953AD927738 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (" -fPIC        -DNDEBUG ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B276BB9375B049D18B323B2D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B6976F981F3942A19495CFFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		BC6BA4B2AEAA4EFAA7BAD73F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D00DA3E52B1C456A90149873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL",/opt/homebrew/include/freetype2,"/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glew/include","/Users/alexhao/desktop/CS184/cs184-final-project/CGL/deps/glfw/include","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64 -fPIC         ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D7144D8B40144D8ABFC1695E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E24FECD4CF1D4942B2F27704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E47C8732ACEA4B869B243A4D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F225B7F2FBA14A61B601D7B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EC327A20EE84777BBA9C8B9 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E528AABFC394F6AAE9DA240 /* Debug */,
+				9C5A0FAB1010432A8931BAB6 /* Release */,
+				89F2AFE13BD6426583F4B488 /* MinSizeRel */,
+				2C1FE4FD446E40B0B1926876 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2A9564771D59483690E5F07C /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22675CA0F242499683777591 /* Debug */,
+				F225B7F2FBA14A61B601D7B9 /* Release */,
+				62EB34838DEC4A209084D693 /* MinSizeRel */,
+				E47C8732ACEA4B869B243A4D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3F1BB3843DA943AEA0D5F856 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24FECD4CF1D4942B2F27704 /* Debug */,
+				562ACF1129D04B739B9D75BE /* Release */,
+				B276BB9375B049D18B323B2D /* MinSizeRel */,
+				804E11F323004D6397A9473D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		49E313D311A241A587BC6D6D /* Build configuration list for PBXProject "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899023BB16AA4B5F859F81B4 /* Debug */,
+				17F4DA9FF58341A0BF5E6772 /* Release */,
+				5EECE70B78D84938974EDBAA /* MinSizeRel */,
+				8B9D638FE4F04D77AF5AE0F7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5C644E93530A4D7B8B1252FA /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92636A5C4DE84C989ADC1BF8 /* Debug */,
+				27856FC03F8E47399E9DAB41 /* Release */,
+				31CFD8A9442940A49AA2B39B /* MinSizeRel */,
+				AAACBB554A5A4953AD927738 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		95CCC3FC22284C2CAF7899E1 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0617A81ED27340D9866381F2 /* Debug */,
+				7273C85486BD40BD9F28D851 /* Release */,
+				D7144D8B40144D8ABFC1695E /* MinSizeRel */,
+				BC6BA4B2AEAA4EFAA7BAD73F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CD0A45D9F3364C85B61346A0 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6976F981F3942A19495CFFF /* Debug */,
+				5DD3BE087D9248389BF011DF /* Release */,
+				5F44BC94B4D44F3D8D9A0FDD /* MinSizeRel */,
+				04AA9C27A61C4C12B5819E84 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D8D971401CB84839B37D01F1 /* Build configuration list for PBXNativeTarget "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00DA3E52B1C456A90149873 /* Debug */,
+				59AD1D7C9B444D57AD651735 /* Release */,
+				6213178E362C4E93B85A5B68 /* MinSizeRel */,
+				50C35333A6CE4FBAAA73850B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D94F7B46DCB942EFBC739049 /* Project object */;
+}

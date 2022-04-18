@@ -1,0 +1,17 @@
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CMakeFiles/pathtracer.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CMakeFiles/pt31.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CMakeFiles/install.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CMakeFiles/ALL_BUILD.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CMakeFiles/ZERO_CHECK.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/CGL.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/install.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/ALL_BUILD.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/CMakeFiles/ZERO_CHECK.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew/CMakeFiles/glew.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew/CMakeFiles/install.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/CMakeFiles/uninstall.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/CMakeFiles/install.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/CMakeFiles/ALL_BUILD.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/CMakeFiles/ZERO_CHECK.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/CMakeFiles/glfw.dir
+/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/src/CMakeFiles/install.dir
