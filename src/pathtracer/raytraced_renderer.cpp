@@ -265,6 +265,8 @@ void RaytracedRenderer::start_visualizing() {
  * If the pathtracer is in READY, transition to RENDERING.
  */
 void RaytracedRenderer::start_raytracing() {
+  //  camera->initialize_zoom_lens(0);
+    
   if (state != READY) return;
 
   rayLog.clear();
@@ -510,6 +512,16 @@ void RaytracedRenderer::visualize_cell() const {
 void RaytracedRenderer::key_press(int key) {
   BVHNode *current = selectionHistory.top();
   switch (key) {
+    //lens zoom
+  case 'w': case 'W':
+    pt->camera->zoom_index = std::max(pt->camera->zoom_index - 0.2, 0.0);
+    fprintf(stdout, "[PathTracer] Camera zoom index reduced to %f.\n (0 is wide and 1 is tele)", pt->camera->zoom_index);
+    break;
+  case 't': case 'T':
+    pt->camera->zoom_index = std::min(pt->camera->zoom_index + 0.2, 1.0);
+    fprintf(stdout, "[PathTracer] Camera zoom index increased to %f.\n (0 is wide and 1 is tele)", pt->camera->zoom_index);
+    break;
+    //lens zoom end
   case ']':
     pt->ns_aa *=2;
     fprintf(stdout, "[PathTracer] Samples per pixel changed to %lu\n", pt->ns_aa);
@@ -542,7 +554,7 @@ void RaytracedRenderer::key_press(int key) {
     fprintf(stdout, "[PathTracer] Toggled direct lighting to %s\n", (pt->direct_hemisphere_sample ? "uniform hemisphere sampling" : "importance light sampling"));
     break;
   case 'k': case 'K':
-    pt->camera->lensRadius = std::max(pt->camera->lensRadius - 0.05, 0.0);
+    pt->camera->lensRadius = std::max(pt->camera->lensRadius - 0.05, 0.05);
     fprintf(stdout, "[PathTracer] Camera lens radius reduced to %f.\n", pt->camera->lensRadius);
     break;
   case 'l': case 'L':

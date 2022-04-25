@@ -256,6 +256,8 @@ void PathTracer::raytrace_pixel(size_t x, size_t y) {
   // TODO (Part 5):
   // Modify your implementation to include adaptive sampling.
   // Use the command line parameters "samplesPerBatch" and "maxTolerance"
+    
+  camera->initialize_zoom_lens(0);
 
   int num_samples = ns_aa;          // total samples to evaluate
   Vector2D origin = Vector2D(x, y); // bottom left corner of the pixel
@@ -269,7 +271,14 @@ void PathTracer::raytrace_pixel(size_t x, size_t y) {
     for (i = 0; i < num_samples; i++) {
         Vector2D sample = gridSampler->get_sample() + origin;
         Vector2D samplesForLens = gridSampler->get_sample();
-        Ray ray = camera->generate_ray_for_thin_lens(sample[0] / sampleBuffer.w, sample[1] / sampleBuffer.h, samplesForLens.x, samplesForLens.y * 2.0 * PI);
+        Ray ray = camera->generate_ray_for_zoom_lens(sample[0] / sampleBuffer.w, sample[1] / sampleBuffer.h, samplesForLens.x, samplesForLens.y * 2.0 * PI);
+        
+        // re-sample if the sampled ray did not go through the aperture
+        if (ray.d.norm() == 0) {
+            i--;
+            continue;
+        }
+        
         double min_t = ray.min_t;
         ray = Ray(ray.o, ray.d, ray.max_t, max_ray_depth);
         ray.min_t = min_t;

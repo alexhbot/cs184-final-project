@@ -14,8 +14,8 @@
             filePath = "src/pathtracer/camera_lens.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "Camera::generate_ray_for_thin_lens(x, y, rndR, rndTheta)"
             landmarkType = "7">
          </BreakpointContent>

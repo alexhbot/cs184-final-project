@@ -438,6 +438,8 @@ void Application::keyboard_event(int key, int event, unsigned char mods) {
             renderer->save_image();
             break;
           case '[': case ']':
+          case 'w': case 'W': //wide zoom
+          case 't': case 'T': //tele zoom
           case '+': case '=':
           case '-': case '_':
           case '.': case '>':

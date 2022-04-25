@@ -2,6 +2,7 @@
 #define CGL_CAMERA_H
 
 #include <iostream>
+#include <vector>
 
 #include "scene/collada/camera_info.h"
 #include "CGL/matrix3x3.h"
@@ -11,6 +12,60 @@
 
 
 namespace CGL {
+
+/**
+ * Lens element.
+ */
+struct Lens {
+    
+    double pos; ///z dimension of the element in camera space
+    double radius;  ///radius of the element
+    double front_radius_of_curvature;   ///the radius of curvature of the front surface
+    double front_sphere_offset; ///offset in z dimension of the front surface's sphere's origin from pos
+    double front_ior;  ///index of refraction of the front surface's sphere
+    double back_radius_of_curvature;   ///the radius of curvature of the back surface
+    double back_sphere_offset; ///offset in z dimension of the back surface's sphere's origin from pos
+    double back_ior;  ///index of refraction of the back surface's sphere
+    
+    Lens(){}
+    
+    /**
+     * Constructor.
+     * Create a lens element instance with given position and geometries.
+     * \param pos z dimension of the element in camera space
+     * \param radius radius of the element
+     * \param front_radius_of_curvature the radius of curvature of the front surface
+     * \param front_sphere_offset offset in z dimension of the front surface's sphere's origin from pos
+     * \param front_ior index of refraction of the front surface's sphere
+     * \param back_radius_of_curvature the radius of curvature of the back surface
+     * \param back_sphere_offset offset in z dimension of the back surface's sphere's origin from pos
+     * \param back_ior index of refraction of the back surface's sphere
+     */
+    Lens(
+         double pos,
+         double radius,
+         double front_radius_of_curvature,
+         double front_sphere_offset,
+         double front_ior,
+         double back_radius_of_curvature,
+         double back_sphere_offset,
+         double back_ior
+         )
+        :   pos(pos),
+    radius(radius),
+    front_radius_of_curvature(front_radius_of_curvature),
+    front_sphere_offset(front_sphere_offset),
+    front_ior(front_ior),
+    back_radius_of_curvature(back_radius_of_curvature),
+    back_sphere_offset(back_sphere_offset),
+    back_ior(back_ior) {}
+    
+    /**
+     * Takes in a ray coming from the back, and an address to store the ray refracted to the front.
+     * Return true iff the ray successfully passes through the lens without hitting the lens barrel or the aperture blades.
+     */
+    bool refract(Ray in_ray, Ray *out_ray) const;
+};
 
 /**
  * Camera.
@@ -89,10 +144,39 @@ class Camera {
   Ray generate_ray(double x, double y) const;
 
   Ray generate_ray_for_thin_lens(double x, double y, double rndR, double rndTheta) const;
+    
+    void initialize_zoom_lens(double i) ;
+    
+    Ray generate_ray_for_zoom_lens(double x, double y, double rndR, double rndTheta) const;
+    
+    /**
+     * Returns true iff the ray passes through the aperture successfully
+     */
+    bool pass_aperture(Ray in_ray) const;
 
   // Lens aperture and focal distance for depth of field effects.
   double lensRadius;
   double focalDistance;
+  
+    // Lens elements, where the first is closest to the sensor, and the last is closest to the object
+    Lens* lens_elem_one;
+    Lens* lens_elem_two;
+    Lens* lens_elem_three;
+    Lens* lens_elem_four;
+    Lens* lens_elem_five;
+    Lens* lens_elem_six;
+    
+    // position in z-axis of the aperture
+    double aperture_pos;
+    
+    // radius of the aperture
+    double aperture_radius;
+    
+    // between 0 and 1, where 0 is the wide end and 1 is the telephoto end
+    double zoom_index = 0;
+    
+    // to be adjusted by autofocus, can be negative or positive
+    double focus_offset = 0;
 
  private:
   // Computes pos, screenXDir, screenYDir from target, r, phi, theta.
@@ -117,6 +201,10 @@ class Camera {
   size_t screenW, screenH;
   double screenDist;
 };
+
+
+
+
 
 } // namespace CGL
 

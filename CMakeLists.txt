@@ -59,6 +59,7 @@ set(APPLICATION_3_2_SOURCE
     src/pathtracer/advanced_bsdf.cpp
     src/scene/environment_light.cpp
     src/pathtracer/camera_lens.cpp
+    src/pathtracer/lens.cpp
     src/pathtracer/raytraced_renderer.cpp
 
     # misc
@@ -121,6 +122,7 @@ set(APPLICATION_HEADERS
     src/pathtracer/bsdf.h
     src/pathtracer/camera.h
     src/pathtracer/intersection.h
+    src/pathtracer/lens.h
     src/pathtracer/pathtracer.h
     src/pathtracer/ray.h
     src/pathtracer/raytraced_renderer.h

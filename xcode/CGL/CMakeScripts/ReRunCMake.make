@@ -19,7 +19,6 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CMakePackageConfigHelpers.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CheckCSourceCompiles.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CheckCXXSourceRuns.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CheckIncludeFile.c.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CheckIncludeFile.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/CheckLibraryExists.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.22.3/share/cmake/Modules/FindDoxygen.cmake))
