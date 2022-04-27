@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Final Project</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+
+<h2 align="middle">CS 184 Final Project Milestone | Spring 2022 </h2>
+    <!-- <h3 align="middle">Published at: https://alexhbot.github.io/cs184-final-project/</h3> -->
+
+    <h1 align="middle"> Realistic Lens Simulation </h1>
+    <!-- <p align="middle">Alex Hao</p>
+    <p align="middle">Arthur Yin</p>
+    <p align="middle">Cindy Chen</p>
+    <p align="middle">Hanchen Wang</p> -->
+    <p align="middle">Alex Hao, Arthur Yin, Cindy Chen, Hanchen Wang</p>
+    <br><br>
+
+    <div>
+
+    <h2 align="middle">Summary</h2>
+    <p> At this point, we have fullly completed part 1 of the project. We have a fully functioning compound zoom lens, and although the auto-focus algorithm is not implemented yet, we do have some priliminary design ideas about it. </p>
+    
+    <p> View the milestone video here: <a href="https://youtu.be/dvh1kaYHlsg">Video</a> </p>
+    
+    <p> View the presentation slides here: <a href="https://docs.google.com/presentation/d/1CKW2FoDoGy5ZpF8CiDctQxF-gPUHAsOVBfqi6ZlfSdg/edit?usp=sharing">Slides</a> </p>
+
+    <br>
+
+    <h2 align="middle">Part 1: Multi-Element Zoom Lens</h2>
+    
+    <h3> Reference design: </h3>
+    
+    <p> We simulted a compound zoom lens design from Modern Lens Design by Warren J. Smith, chapter 20.1, figure 20.2. This is a two-component, eight-element, retrofocus type zoom lens, with a zoom ratio of 1.89x. Below are diagrams of the lens in wide-angle state and telephoto state. </p>
+    
+    <div align="center">
+        <table style="width=100%">
+            <tr>
+                <td>
+                    <td align="middle">
+                    <img src="img/lens_design_wide.jpg" width="480px" />
+                    <figcaption align="middle">Wide-angle configuration</figcaption>
+                </td>
+                <td>
+                    <td align="middle">
+                    <img src="img/lens_design_tele.jpg" width="480px" />
+                    <figcaption align="middle">Telephoto configuration</figcaption>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    
+    <p> The following is an annotated diagram that we used to encode the lens into the pathtracer. </p>
+    <div align="center">
+    <img src="./img/lens_diagram.jpg" width="800px" />
+    <figcaption align="middle">Annotated lens at the wide-angle end</figcaption>
+    </div>
+    
+    <br>
+    
+    <p> Let the element closest to the sensor be element one, and the element closest to object be element eight. Lens zoom is achieved by increasing the distance between elements one and two while decreasing the distance between elements five and six. The magnitude of the change is linearly controlled by zoom_index, a variable between 0 and 1. See below for details. </p>
+    
+    <br>
+    
+    <h3> New data structures: </h3>
+
+    <p> 1. Added a Lens struct in camera.h, which contains all the parameters associated with a single lens element. </p>
+
+    <p> 2. Added lens_elem_one to lens_elem_eight fields to the camera class to keep track of all lens elements of the camera lens. </p>
+
+    <p> 3. Added zoom_index field to the camerea class, which ranges between 0 and 1, with 0 being the wide-angle end and 1 being the telephoto end. </p>
+    
+    <br>
+
+    <h3> New GUI controls: </h3>
+
+    <p> 1. "W" and "T" keys can now zoom the lens wider or tighter, respectively. There are six levels of adjustments. </p>
+    
+    <p> 2. "K" and "L" keys still narrows down and opens up the aperture, respectively, but LensRadius is now limited to between 0 and 1, with 1 being the maximum aperture and 0 being a pinhole model. </p>
+    
+    <p> 3. ";" and " ' " keys still make the lens focus closer and farther, respectively. But since now the AF algorithm and this manual focus controll share the same variable Camera::focalDistance, this input may be overridden by the AF algorithm. </p>
+    
+    <br>
+    
+    <h3> Demo: </h3>
+    
+    <p> Here is a short demo of the compression effect that we are now able to achieve: </p>
+    <div align="center">
+    <img src="./img/zoom.gif" width="800px" />
+    </div>
+    <p> This is done by zooming in while moving the camera backwards to keep composition the same. </p>
+    
+    <br>
+
+    <h2 align="middle">Part 2: Contrast-Detection Auto Focus</h2>
+    
+    <h3> Some ideas: </h3>
+
+    <p> 1. The auto focus algorithm talks to the lens exclusively via the Camera::focalDistance attribute, so the output of the algorithm should only be an adjustment of that attribute, which can be positive or negative. </p>
+
+    <p> 2. Run the auto focus algorithm before the actual rendering begins. Once the algo calculates the final value for Camera::focalDistance, the full rendering can start using that value. </p>
+
+    <p> 3. Set a "focus patch" in the screen center, about 20 pixels by 20 pixels. The algorithm simply renders that patch with many different Camera::focalDistance values, and terminates once it finds a value that makes the patch look sharp (that is, decreasing or increasing Camera::focalDistance only makes the patch more blurry). </p>
+    
+    <p> 4. Large increments of Camera::focalDistance are useful at the start, while fine-grained increments are useful when close to the goal value.
+
+    <p> 5. A challenge is to define sharpness, i.e. how can you quantify the sharpness of an image patch. </p>
+
+    <p> 6. This algo may not always succeed in finding the correct focus, and that is ok, since its success depends on where the center patch points to. If it points to an area with distinct lines, the focusing will be easier; if it points to, for instance, a pure white wall, it can't possibly focus correctly. So we probably want to let the center patch point to a good spot during testing and debugging. </p>
+
+    <br>
+
+    <h2 align="middle">Schedule</h2>
+    <b> <p> Week of 4/11 to 4/17:   ***DONE!***</p> </b>
+    <p> &emsp;1. Research the available lens designs and discuss to decide on one with appropriate complexity.&ensp;</p>
+    <p> &emsp;2. All members review part 4 of project 3-2 and use that as a starting point.&ensp; </p>
+    <p> &emsp;3. Encode all lens elements. Explore on necessary equations. &ensp;</p>
+    <p> Week of 4/18 to 4/24:  ***DONE!***</p>
+    <p> &emsp;1. Implement lens zoom. &ensp;</p>
+    <p> &emsp;2. Update GUI to accommodate lens zoom parameters. &ensp;</p>
+    <p> &emsp;3. All members reasearch the principles of contrast-detection auto focus and its implementations. &ensp;</p>
+    <p> Week of 4/25 to 5/1:  ***ON TRACK***  </p>
+    <p> &emsp;1. Milestone on 4/26. &ensp;</p>
+    <p> &emsp;2. Implement auto focus. &ensp;</p>
+    <p> &emsp;3. Add chromatic aberration parameters to lens elements. &ensp;</p>
+    <p> Week of 5/2 to 5/5:  </p>
+    <p> &emsp;1. Make presentation.&ensp; </p>
+    <p> &emsp;2. Final presentation on 5/5. &ensp;</p>
+    <p> &emsp;3. Finalize report and other deliverables.&ensp; </p>
+
+    <br>
+
+    <h2 align="middle">Resources</h2>
+    <p> Smith, Warren J. Modern Lens Design. McGraw-Hill, 2005.  </p>
+
+</div>
+</body>
+</html>

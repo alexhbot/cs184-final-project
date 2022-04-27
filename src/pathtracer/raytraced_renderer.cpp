@@ -265,7 +265,7 @@ void RaytracedRenderer::start_visualizing() {
  * If the pathtracer is in READY, transition to RENDERING.
  */
 void RaytracedRenderer::start_raytracing() {
-  //  camera->initialize_zoom_lens(0);
+  camera->initialize_zoom_lens();
     
   if (state != READY) return;
 
@@ -554,19 +554,19 @@ void RaytracedRenderer::key_press(int key) {
     fprintf(stdout, "[PathTracer] Toggled direct lighting to %s\n", (pt->direct_hemisphere_sample ? "uniform hemisphere sampling" : "importance light sampling"));
     break;
   case 'k': case 'K':
-    pt->camera->lensRadius = std::max(pt->camera->lensRadius - 0.05, 0.05);
+    pt->camera->lensRadius = std::max(pt->camera->lensRadius - 0.05, 0.0);
     fprintf(stdout, "[PathTracer] Camera lens radius reduced to %f.\n", pt->camera->lensRadius);
     break;
   case 'l': case 'L':
-    pt->camera->lensRadius = pt->camera->lensRadius + 0.05;
+    pt->camera->lensRadius = std::min(pt->camera->lensRadius + 0.05, 1.0);
     fprintf(stdout, "[PathTracer] Camera lens radius increased to %f.\n", pt->camera->lensRadius);
     break;
   case ';':
-    pt->camera->focalDistance = std::max(pt->camera->focalDistance - 0.1, 0.0);
+    pt->camera->focalDistance = pt->camera->focalDistance - 0.05;
     fprintf(stdout, "[PathTracer] Camera focal distance reduced to %f.\n", pt->camera->focalDistance);
     break;
   case '\'':
-    pt->camera->focalDistance = pt->camera->focalDistance + 0.1;
+    pt->camera->focalDistance = pt->camera->focalDistance + 0.05;
     fprintf(stdout, "[PathTracer] Camera focal distance increased to %f.\n", pt->camera->focalDistance);
     break;
   case KEYBOARD_UP:

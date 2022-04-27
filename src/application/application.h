@@ -61,7 +61,7 @@ struct AppConfig {
 
     pathtracer_filename = "";
     pathtracer_lensRadius = 0.0;
-    pathtracer_focalDistance = 4.7;
+    pathtracer_focalDistance = -3;
   }
 
   size_t pathtracer_ns_aa;

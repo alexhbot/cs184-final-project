@@ -53,89 +53,95 @@ Ray Camera::generate_ray_for_thin_lens(double x, double y, double rndR, double r
     return ray;
 }
 
-void Camera::initialize_zoom_lens(double i) {
-    // standard element positions: 0.0, -1.0, -1.5, -3.3, -3.6
-    // standard aperture position: -1.7
+// Scale down the camera system to fit the scene, since original lens spec is in millimeters
+#define scale_camera_to_scene 0.03
+
+void Camera::initialize_zoom_lens() {
     
-    double one_two_wide = 0.79;
-    double one_two_tele = 2.87;
+    double x = scale_camera_to_scene;
     
-    double four_five_wide = 1.47;
-    double four_five_tele = 0.24;
+    // Zoom parameters
+    double one_two_wide = 4.54;
+    double one_two_tele = 38.63;
     
+    double five_six_wide = 70.03;
+    double five_six_tele = 3.00;
+    
+    // Set up the lens elements
     // From the back-most element to the front-most element
-    //Lens(
-    //     double pos,
-    //     double radius,
-    //     double front_radius_of_curvature,
-    //     double front_sphere_offset,
-    //     double front_ior,
-    //     double back_radius_of_curvature,
-    //     double back_sphere_offset,
-    //     double back_ior
-    //     )
     lens_elem_one = new Lens(0.0,   //pos
-                             1.5/2.0,   //radius
-                             7.14,  //front_radius_of_curvature
-                             7.04,  //front_sphere_offset
-                             1.77,  //front_ior
-                             2.46,  //back_radius_of_curvature
-                             -2.36, //back_sphere_offset
-                             1.77); //back_ior
-    lens_elem_two = new Lens(lens_elem_one->pos - (one_two_wide + zoom_index * (one_two_tele - one_two_wide)) - 0.1 - 0.03,  //pos
-                             0.75/2.0,  //radius
-                             0.76,  //front_radius_of_curvature
-                             -0.78,  //front_sphere_offset
-                             1.0/1.72,  //front_ior *******************
-                             0.57,  //back_radius_of_curvature
-                             0.60,  //back_sphere_offset
-                             1.72); //back_ior *******************
-    lens_elem_three = new Lens(lens_elem_two->pos - 0.19,  //pos
-                             0.75/2.0,  //radius
-                             1.87,  //front_radius_of_curvature
-                             1.70,  //front_sphere_offset
-                             1.83,  //front_ior
-                             0.76,  //back_radius_of_curvature
-                             -0.59,  //back_sphere_offset
-                             1.83); //back_ior
-    lens_elem_four = new Lens(lens_elem_three->pos - 0.36,    //pos
-                            0.8/2.0,    //radius
-                            0.93,   //front_radius_of_curvature
-                            0.83,   //front_sphere_offset
-                            1.62,   //front_ior
-                            2.35,   //back_radius_of_curvature
-                            -2.25,  //back_sphere_offset
-                            1.62);  //back_ior
-    aperture_pos = lens_elem_four->pos - 0.19;
-    aperture_radius = 0.8/2.0;
-    lens_elem_five = new Lens(aperture_pos - (four_five_wide + zoom_index * (four_five_tele - four_five_wide)) - 0.05,  //pos
-                            1.3/2.0,    //radius
-                            1.47,   //front_radius_of_curvature
-                            1.37,   //front_sphere_offset
-                            1.92,   //front_ior
-                            3.33,   //back_radius_of_curvature
-                            3.38,   //back_sphere_offset
-                            1.92);  //back_ior *******************
-    lens_elem_six = new Lens(lens_elem_five->pos - 0.37,    //pos
-                            1.5/2.0,    //radius
-                            1000000000.6,    //front_radius_of_curvature
-                            1000000000, //front_sphere_offset
-                            1.88,   //front_ior
-                            0.99,   //back_radius_of_curvature
-                            1,      //back_sphere_offset
-                            1.88);  //back_ior *******************
+                             x * 45.0/2.0,   //radius
+                             x * 200.00,  //front_radius_of_curvature
+                             x * -203.00,  //front_sphere_offset
+                             1.0/1.589,  //front_ior
+                             x * 289.81,  //back_radius_of_curvature
+                             x * -289.81, //back_sphere_offset
+                             1.589); //back_ior
+    lens_elem_two = new Lens(lens_elem_one->pos - x * (3.0 + (one_two_wide * (1.0 - zoom_index) + one_two_wide * zoom_index)),  //pos
+                             x * 29.0/2.0,  //radius
+                             x * 111.55,  //front_radius_of_curvature
+                             x * -115.63,  //front_sphere_offset
+                             1.0/1.689,  //front_ior
+                             x * 47.47,  //back_radius_of_curvature
+                             x * -47.47,  //back_sphere_offset
+                             1.689); //back_ior
+    lens_elem_three = new Lens(lens_elem_two->pos - x * 15.26,  //pos
+                               x * 32.0/2.0,  //radius
+                               x * 199.02,  //front_radius_of_curvature
+                               x * -207.14,  //front_sphere_offset
+                               1.0/1.805,  //front_ior
+                               x * 31.67,  //back_radius_of_curvature
+                               x * 31.67,  //back_sphere_offset
+                               1.0/1.805); //back_ior
+    lens_elem_four = new Lens(lens_elem_three->pos - x * 9.20,    //pos
+                              x * 34.0/2.0,    //radius
+                              x * 40.32,   //front_radius_of_curvature
+                              x * 34.67,   //front_sphere_offset
+                              1.720,   //front_ior
+                              x * 302.87,   //back_radius_of_curvature
+                              x * 302.87,  //back_sphere_offset
+                              1.0/1.720);  //back_ior
+    lens_elem_five = new Lens(lens_elem_four->pos - x * 11.05,  //pos
+                              x * 48.0/2.0,    //radius
+                              x * 60.56,   //front_radius_of_curvature
+                              x * 54.45,   //front_sphere_offset
+                              1.713,   //front_ior
+                              x * 238.75,   //back_radius_of_curvature
+                              x * -238.75,   //back_sphere_offset
+                              1.713);  //back_ior
+    lens_elem_six = new Lens(lens_elem_five->pos - x * (6.11 + (five_six_wide * (1.0 - zoom_index) + five_six_tele * zoom_index)),    //pos
+                             x * 68.0/2.0,    //radius
+                             x * 53.35,    //front_radius_of_curvature
+                             x * 44.42, //front_sphere_offset
+                             1.805,   //front_ior
+                             x * 114.94,   //back_radius_of_curvature
+                             x * 114.94,      //back_sphere_offset
+                             1.0/1.805);  //back_ior
+    lens_elem_seven = new Lens(lens_elem_six->pos - x * 14.27,    //pos
+                               x * 68.0/2.0,    //radius
+                               x * 78.96,    //front_radius_of_curvature
+                               x * 75.90, //front_sphere_offset
+                               1.773,   //front_ior
+                               x * 53.77,   //back_radius_of_curvature
+                               x * 53.77,      //back_sphere_offset
+                               1.0/1.773);  //back_ior
+    lens_elem_eight = new Lens(lens_elem_seven->pos - x * 7.58,    //pos
+                               x * 80.0/2.0,    //radius
+                               x * 231.88,    //front_radius_of_curvature
+                               x * 228.58, //front_sphere_offset
+                               1.834,   //front_ior
+                               x * 52.68,   //back_radius_of_curvature
+                               x * 52.68,      //back_sphere_offset
+                               1.0/1.834);  //back_ior
 }
 
 Ray Camera::generate_ray_for_zoom_lens(double x, double y, double rndR, double rndTheta) const {
     
-    double sensor_one_wide = 0.49;
-    double sensor_one_tele = 0.29;
-    
     // distance from sensor to the closest lens element
-    double dist = 4.5 + zoom_index * 18 + (sensor_one_wide + zoom_index * (sensor_one_tele - sensor_one_wide)) + 0.10 + 0.10 + 0.17;
+    double dist = scale_camera_to_scene * 75.61;
     
-    // radius of the closest lens element
-    double r = 0.08/2.0;
+    // radius of the back-most lens element
+    double r = lens_elem_one->radius * max(lensRadius, 0.000000000001);
     
     // find point on the image plane, pFilm
     double bl_corner_x = -tan(0.5 * hFov * ( M_PI / 180.0 ));
@@ -146,9 +152,12 @@ Ray Camera::generate_ray_for_zoom_lens(double x, double y, double rndR, double r
     double camera_x = bl_corner_x + (tr_corner_x - bl_corner_x) * x;
     double camera_y = bl_corner_y + (tr_corner_y - bl_corner_y) * y;
     
-    double scale_factor = 1.125 / (tr_corner_y - bl_corner_y);
+    // scale the image plane to the size of a full frame sensor (24mm tall), so that size relative to the lens is correct
+    double sensor_scale_factor = 24.0 / (tr_corner_y - bl_corner_y);
     
-    Vector3D pfilm = Vector3D(camera_x * scale_factor, camera_y * scale_factor, dist + focus_offset);
+    Vector3D pfilm = Vector3D(-camera_x * sensor_scale_factor * scale_camera_to_scene,
+                              -camera_y * sensor_scale_factor * scale_camera_to_scene,
+                              dist - 10 * scale_camera_to_scene * focalDistance);
     
     // find sample point on the closest lens element, pLens
     Vector3D plens = Vector3D(r * sqrt(rndR) * cos(rndTheta), r * sqrt(rndR) * sin(rndTheta), 0);
@@ -156,6 +165,7 @@ Ray Camera::generate_ray_for_zoom_lens(double x, double y, double rndR, double r
     Ray ray = Ray(pfilm, (plens - pfilm).unit());
     ray.max_t = INF_D;
     ray.min_t = EPS_F;
+    
     if (!lens_elem_one->refract(ray, &ray)) {
         return Ray();
     }
@@ -166,20 +176,24 @@ Ray Camera::generate_ray_for_zoom_lens(double x, double y, double rndR, double r
         return Ray();
     }
     if (!lens_elem_four->refract(ray, &ray)) {
-            return Ray();
-    }
-    
-    if (!pass_aperture(ray)) {
         return Ray();
     }
-    
     if (!lens_elem_five->refract(ray, &ray)) {
         return Ray();
     }
     if (!lens_elem_six->refract(ray, &ray)) {
         return Ray();
     }
-    
+    if (!lens_elem_seven->refract(ray, &ray)) {
+        return Ray();
+    }
+    if (!lens_elem_eight->refract(ray, &ray)) {
+        return Ray();
+    }
+
+    // Configure the final generated ray
+    // Offset the ray to reduce the impact of lens length
+    ray.o.z = 0;
     
     ray = Ray((c2w * ray.o) + pos, c2w * ray.d);
     ray.min_t = nClip;
@@ -189,13 +203,6 @@ Ray Camera::generate_ray_for_zoom_lens(double x, double y, double rndR, double r
 }
 
 bool Lens::refract(Ray in_ray, Ray *out_ray) const {
-    
-    // check if the ray misses the lens element
-//    double t = (pos - in_ray.o.z) / in_ray.d.z;
-//    Vector3D p = in_ray.at_time(t);
-//    if ((Vector3D(0.0, 0.0, pos) - p).norm() >= radius) {
-//        return false;
-//    }
     
     Ray temp_ray;
     
@@ -268,22 +275,10 @@ bool Lens::refract(Ray in_ray, Ray *out_ray) const {
     out_ray->max_t = INF_D;
     out_ray->min_t = EPS_F;
     
-    out_ray->o = out_ray->o - (out_ray->d);
+    // Slightly offset the ray origin to allow for back-to-back lens elements
+    out_ray->o = out_ray->o - (0.000001 * out_ray->d);
     
     return true;
-}
-
-bool Camera::pass_aperture(Ray in_ray) const {
-
-    double t = (aperture_pos - in_ray.o.z) / in_ray.d.z;
-    Vector3D p = in_ray.at_time(t);
-    
-    if ((Vector3D(0.0, 0.0, aperture_pos) - p).norm() > (lensRadius * aperture_radius)) {
-        return false;
-    } else {
-        return true;
-    }
-    
 }
 
 }// namespace CGL

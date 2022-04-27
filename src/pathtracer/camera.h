@@ -145,14 +145,9 @@ class Camera {
 
   Ray generate_ray_for_thin_lens(double x, double y, double rndR, double rndTheta) const;
     
-    void initialize_zoom_lens(double i) ;
+    void initialize_zoom_lens() ;
     
     Ray generate_ray_for_zoom_lens(double x, double y, double rndR, double rndTheta) const;
-    
-    /**
-     * Returns true iff the ray passes through the aperture successfully
-     */
-    bool pass_aperture(Ray in_ray) const;
 
   // Lens aperture and focal distance for depth of field effects.
   double lensRadius;
@@ -165,18 +160,11 @@ class Camera {
     Lens* lens_elem_four;
     Lens* lens_elem_five;
     Lens* lens_elem_six;
-    
-    // position in z-axis of the aperture
-    double aperture_pos;
-    
-    // radius of the aperture
-    double aperture_radius;
+    Lens* lens_elem_seven;
+    Lens* lens_elem_eight;
     
     // between 0 and 1, where 0 is the wide end and 1 is the telephoto end
     double zoom_index = 0;
-    
-    // to be adjusted by autofocus, can be negative or positive
-    double focus_offset = 0;
 
  private:
   // Computes pos, screenXDir, screenYDir from target, r, phi, theta.
