@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/pathtracer/pathtracer.cpp \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/pathtracer/pathtracer.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/pathtracer/pathtracer.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/pathtracer/pathtracer.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/timer.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/misc.h \
@@ -25,7 +25,6 @@ dependencies: \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/camera.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/collada/camera_info.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/collada/collada_info.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/pathtracer/ray.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/util/work_queue.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/environment_light.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/light.h \

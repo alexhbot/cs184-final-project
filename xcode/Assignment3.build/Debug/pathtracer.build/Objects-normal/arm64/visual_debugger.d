@@ -1,10 +1,10 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/application/visual_debugger.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/application/visual_debugger.cpp \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/imgui/imgui.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/imgui/imconfig.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/imgui/backends/imgui_impl_glfw.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/imgui/backends/imgui_impl_opengl2.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/application/visual_debugger.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/application/visual_debugger.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/application/application.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/misc.h \

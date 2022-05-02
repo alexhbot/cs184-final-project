@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/triangle.cpp \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/triangle.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/object.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/triangle.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/triangle.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/object.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/util/halfEdgeMesh.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/misc.h \
@@ -13,8 +13,8 @@ dependencies: \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/vector3D.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/color.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/collada/material_info.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/scene.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/primitive.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/scene.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/primitive.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/intersection.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/bsdf.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/matrix3x3.h \

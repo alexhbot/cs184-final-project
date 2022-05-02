@@ -1,2 +1,2 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/CGL/src/path.cpp
+  /Users/alexhao/Downloads/cs184-final-project-main/CGL/src/path.cpp

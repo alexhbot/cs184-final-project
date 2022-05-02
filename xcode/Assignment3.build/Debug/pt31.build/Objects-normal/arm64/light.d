@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/light.cpp \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/light.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/light.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/light.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/vector3D.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/misc.h \
@@ -10,15 +10,15 @@ dependencies: \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/vector2D.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/util/random_util.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/util/image.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/scene.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/primitive.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/scene.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/primitive.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/intersection.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/bsdf.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/bbox.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/pathtracer/ray.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/vector4D.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/matrix4x4.h \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/scene/object.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/scene/object.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/util/halfEdgeMesh.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/collada/polymesh_info.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/src/scene/collada/collada_info.h \

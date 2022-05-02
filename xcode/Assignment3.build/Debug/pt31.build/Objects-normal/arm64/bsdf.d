@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/pathtracer/bsdf.cpp \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/src/pathtracer/bsdf.h \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/pathtracer/bsdf.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/src/pathtracer/bsdf.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/misc.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/vector3D.h \

@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/alexhao/Desktop/CS184/cs184-final-project/CGL/src/viewer.cpp \
+  /Users/alexhao/Downloads/cs184-final-project-main/CGL/src/viewer.cpp \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/viewer.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/renderer.h \
   /Users/alexhao/desktop/CS184/cs184-final-project/CGL/include/CGL/CGL.h \
