@@ -455,6 +455,12 @@ void Application::keyboard_event(int key, int event, unsigned char mods) {
           case 'C': 
             renderer->key_press(key);
             break;
+          case 'O':
+            renderer->key_press(key);
+            break;
+          case 'Y':
+            renderer->key_press(key);
+            break;
           case 'r': case 'R':
             renderer->stop();
             renderer->start_raytracing();

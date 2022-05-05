@@ -1,8 +1,8 @@
-# Install script for directory: /Users/alexhao/desktop/CS184/cs184-final-project/CGL
+# Install script for directory: /Users/CC/Desktop/184/cs184-final-project/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/alexhao/desktop/CS184/cs184-final-project/CGL")
+  set(CMAKE_INSTALL_PREFIX "/Users/CC/Desktop/184/cs184-final-project/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,12 +37,12 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
 endif()
 
-set(CMAKE_BINARY_DIR "/Users/alexhao/desktop/CS184/cs184-final-project/xcode")
+set(CMAKE_BINARY_DIR "/Users/CC/Desktop/184/cs184-final-project/xcode")
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glew/cmake_install.cmake")
-  include("/Users/alexhao/desktop/CS184/cs184-final-project/xcode/CGL/deps/glfw/cmake_install.cmake")
+  include("/Users/CC/Desktop/184/cs184-final-project/xcode/CGL/deps/glew/cmake_install.cmake")
+  include("/Users/CC/Desktop/184/cs184-final-project/xcode/CGL/deps/glfw/cmake_install.cmake")
 
 endif()
 

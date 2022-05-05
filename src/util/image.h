@@ -30,7 +30,7 @@ struct ImageBuffer {
    * \param w width of the image
    * \param h height of the image
    */
-  ImageBuffer(size_t w, size_t h) : w(w), h(h) { data.resize(w * h); }
+  ImageBuffer(size_t w, size_t h) : w(w), h(h) { data.resize(w * h); greyscale.resize(w * h); }
 
   /**
    * Resize the image buffer.
@@ -41,6 +41,7 @@ struct ImageBuffer {
     this->w = w;
     this->h = h;
     data.resize(w * h);
+    greyscale.resize(w * h);
     clear();
   }
 
@@ -59,6 +60,7 @@ struct ImageBuffer {
     p |= ((uint32_t) (clamp(0.f, 1.f, c.r) * 255));
     p |= 0xFF000000;
     data[x + y * w] = p;
+    greyscale[x + y * w] = 0.299 * c.r + 0.587 * c.g + 0.114 * c.b;
   }
 
   /**
@@ -79,6 +81,7 @@ struct ImageBuffer {
   size_t w; ///< width
   size_t h; ///< height
   std::vector<uint32_t> data;  ///< pixel buffer
+  std::vector<float> greyscale;
 };
 
 /**
@@ -213,7 +216,7 @@ struct HDRImageBuffer {
   size_t w; ///< width
   size_t h; ///< height
   std::vector<Vector3D> data; ///< pixel buffer
-
+  std::vector<float> greyscale;
 }; // class HDRImageBuffer
 
 

@@ -167,6 +167,8 @@ void RaytracedRenderer::set_frame_size(size_t width, size_t height) {
   cell_tl = Vector2D(0,0); 
   cell_br = Vector2D(width, height);
   render_cell = false;
+  cd_auto = false;
+  focusing = false;
 
   pt->set_frame_size(width, height);
 
@@ -196,15 +198,23 @@ void RaytracedRenderer::update_screen() {
     case RENDERING:
       glDrawPixels(frameBuffer.w, frameBuffer.h, GL_RGBA,
                    GL_UNSIGNED_BYTE, &frameBuffer.data[0]);
-      if (render_cell)
-        visualize_cell();
-      break;
+          if (render_cell) {
+              visualize_cell();}
+          if (!render_cell && cd_auto && focusing){
+              visualize_af();
+//              focusing = false;
+          }
+          break;
     case DONE:
       glDrawPixels(frameBuffer.w, frameBuffer.h, GL_RGBA,
                    GL_UNSIGNED_BYTE, &frameBuffer.data[0]);
-      if (render_cell)
-        visualize_cell();
-      break;
+          if (render_cell){
+              visualize_cell();}
+          if (!render_cell && cd_auto && focusing){
+              visualize_af();
+//              focusing = false;
+          }
+          break;
   }
 }
 
@@ -247,6 +257,8 @@ void RaytracedRenderer::clear() {
   frameBuffer.resize(0, 0);
   state = INIT;
   render_cell = false;
+  cd_auto = false;
+  focusing = false;
 
   pt->clear();
 }
@@ -278,7 +290,10 @@ void RaytracedRenderer::start_raytracing() {
 
   size_t width = frameBuffer.w;
   size_t height = frameBuffer.h;
-
+  
+//    cd_autofocus(frameBuffer, Vector2D(0,0), Vector2D(width, height));
+//    update_screen();
+        
   pt->clear();
   pt->set_frame_size(width, height);
 
@@ -286,8 +301,7 @@ void RaytracedRenderer::start_raytracing() {
   pt->camera = camera;
   pt->scene = scene;
 
-  if (!render_cell) {
-    frameBuffer.clear();
+  if (!render_cell) { // entrie pic
     num_tiles_w = width / imageTileSize + 1;
     num_tiles_h = height / imageTileSize + 1;
     tilesTotal = num_tiles_w * num_tiles_h;
@@ -301,7 +315,8 @@ void RaytracedRenderer::start_raytracing() {
             workQueue.put_work(WorkItem(x, y, imageTileSize, imageTileSize));
         }
     }
-  } else {
+      
+  } else { // selected area
     int w = (cell_br-cell_tl).x;
     int h = (cell_br-cell_tl).y;
     int imTS = imageTileSize / 4;
@@ -328,7 +343,83 @@ void RaytracedRenderer::start_raytracing() {
       workerThreads[i] = new std::thread(&RaytracedRenderer::worker_thread, this);
   }
 }
+void RaytracedRenderer::cd_autofocus() {
+    fprintf(stdout, "[PathTracer] Start autofocusing ");
+    float fd = -3;
+    float bestFocalDistance = fd;
+    float best_sharpness = 0;
+    size_t width = frameBuffer.w;
+    size_t height = frameBuffer.h;
+    
+    for(int i = -3; i < 4; i ++) {
+        
+        pt->camera->focalDistance = fd + 0.05 * i;
+        
+        unique_lock<std::mutex> lk(m_done);
+        
+        frameBuffer.clear();
+        num_tiles_w = width / imageTileSize + 1;
+        num_tiles_h = height / imageTileSize + 1;
+        tilesTotal = num_tiles_w * num_tiles_h;
+        tilesDone = 0;
+        tile_samples.resize(num_tiles_w * num_tiles_h);
+        memset(&tile_samples[0], 0, num_tiles_w * num_tiles_h * sizeof(int));
 
+        // populate the tile work queue
+        for (size_t y = height/5*2; y < height/5*3; y += imageTileSize) {
+            for (size_t x = width/5*2; x < width/5*3; x += imageTileSize) {
+                workQueue.put_work(WorkItem(x, y, imageTileSize, imageTileSize));
+            }
+        }
+        
+        bvh->total_isects = 0; bvh->total_rays = 0;
+        // launch threads
+        fprintf(stdout, "[PathTracer] Rendering... "); fflush(stdout);
+        for (int i=0; i<numWorkerThreads; i++) {
+            workerThreads[i] = new std::thread(&RaytracedRenderer::worker_thread, this);
+        }
+        
+        cv_done.wait(lk, [this]{ return state == DONE; });
+        lk.unlock();
+        
+        float max = 0;
+        float min = 100;
+        for (size_t y = height/5*2; y < height/5*3; y += imageTileSize) {
+            for (size_t x = width/5*2; x < width/5*3; x += imageTileSize) {
+                float value = frameBuffer.greyscale[x + y * frameBuffer.w];
+                fprintf(stdout, "value is  %g", value);
+                
+                if(value > max) max = value;
+                if(value < min) min = value;
+            }
+        }
+        fprintf(stdout, "max is  %g, min is %g", max, min);
+        float sharpness = (max - min) / (max + min);
+        fprintf(stdout, "[PathTracer] Sharpness of focalDistance is %g", sharpness);
+
+        if(sharpness > best_sharpness) {
+            bestFocalDistance = pt->camera->focalDistance;
+        }
+    }
+    
+    camera->focalDistance = bestFocalDistance;
+//    start_raytracing();
+    ////
+    num_tiles_w = width / imageTileSize + 1;
+    num_tiles_h = height / imageTileSize + 1;
+    tilesTotal = num_tiles_w * num_tiles_h;
+    tilesDone = 0;
+    tile_samples.resize(num_tiles_w * num_tiles_h);
+    memset(&tile_samples[0], 0, num_tiles_w * num_tiles_h * sizeof(int));
+
+    // populate the tile work queue
+    for (size_t y = 0; y < height; y += imageTileSize) {
+        for (size_t x = 0; x < width; x += imageTileSize) {
+            workQueue.put_work(WorkItem(x, y, imageTileSize, imageTileSize));
+        }
+    }
+    
+}
 void RaytracedRenderer::render_to_file(string filename, size_t x, size_t y, size_t dx, size_t dy) {
   if (x == -1) {
     unique_lock<std::mutex> lk(m_done);
@@ -506,6 +597,52 @@ void RaytracedRenderer::visualize_cell() const {
   glEnable(GL_DEPTH_TEST);
 }
 
+///
+void RaytracedRenderer::visualize_af() const {
+  glPushAttrib(GL_VIEWPORT_BIT);
+  glViewport(0, 0, frameBuffer.w, frameBuffer.h);
+
+  glMatrixMode(GL_PROJECTION);
+  glPushMatrix();
+  glLoadIdentity();
+  glOrtho(0, frameBuffer.w, frameBuffer.h, 0, 0, 1);
+
+  glMatrixMode(GL_MODELVIEW);
+  glPushMatrix();
+  glLoadIdentity();
+  glTranslatef(0, 0, -1);
+
+  glColor4f(1.0, 0.0, 0.0, 0.8);
+  glDisable(GL_DEPTH_TEST);
+  glDisable(GL_LIGHTING);
+    glLineWidth(20);
+  // Draw the Red Rectangle.
+  glBegin(GL_LINE_LOOP);
+  float width_offset = abs(cell_tl.x - cell_br.x) / 5;
+  float height_offset = abs((frameBuffer.h-cell_br.y) - (frameBuffer.h-cell_tl.y)) / 5;
+    
+//  glVertex2f(cell_tl.x/2, (frameBuffer.h-cell_br.y)/2);
+//  glVertex2f(cell_br.x/2, (frameBuffer.h-cell_br.y)/2);
+//  glVertex2f(cell_br.x/2, (frameBuffer.h-cell_tl.y)/2);
+//  glVertex2f(cell_tl.x/2, (frameBuffer.h-cell_tl.y)/2);
+    glVertex2f(width_offset*2, height_offset*3);
+    glVertex2f(width_offset*3, height_offset*3);
+    glVertex2f(width_offset*3, height_offset*2);
+    glVertex2f(width_offset*2, height_offset*2);
+  glEnd();
+
+  glMatrixMode(GL_PROJECTION);
+  glPopMatrix();
+
+  glMatrixMode(GL_MODELVIEW);
+  glPopMatrix();
+
+  glPopAttrib();
+
+  glEnable(GL_LIGHTING);
+  glEnable(GL_DEPTH_TEST);
+}
+
 /**
  * If the pathtracer is in VISUALIZE, handle key presses to traverse the bvh.
  */
@@ -592,7 +729,30 @@ void RaytracedRenderer::key_press(int key) {
     else
       fprintf(stdout, "[PathTracer] No longer in cell render mode.\n");
     break;
-
+          
+//cd_auto
+  case 'Y':
+    cd_auto = !cd_auto;
+    if (cd_auto) {
+      fprintf(stdout, "[PathTracer] cd_auto is on.\n");
+        
+    } else {
+      fprintf(stdout, "[PathTracer] cd_auto is off.\n");
+    }
+    break;
+          
+  case 'O':
+    if (cd_auto) {
+        focusing = !focusing;
+        if (focusing) {
+            fprintf(stdout, "[PathTracer] focus!.\n");
+            visualize_af();
+            cd_autofocus();
+        }
+       
+    }
+    break;
+          
   case 'a': case 'A':
     show_rays = !show_rays;
   default:
@@ -656,12 +816,18 @@ void RaytracedRenderer::raytrace_cell(ImageBuffer& buffer) {
     for (size_t x = tile_start_x; x < tile_end_x; x++) {
       buffer.data[w*(y-tile_start_y)+(x-tile_start_x)] = frameBuffer.data[x+y*frame_w];
     }
+      
   }
 }
 
 void RaytracedRenderer::autofocus(Vector2D loc) {
   pt->autofocus(loc);
 }
+
+//double RaytracedRenderer::cd_autofocus(ImageBuffer &framebuffer, Vector2D tl, Vector2D br) {
+//  pt->cd_autofocus(framebuffer, tl, br);
+//}
+
 
 void RaytracedRenderer::worker_thread() {
 

@@ -96,6 +96,8 @@ public:
 
     Vector2D cell_tl, cell_br;
     bool render_cell;
+    bool cd_auto;
+    bool focusing;
 };
 
 

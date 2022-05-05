@@ -131,7 +131,7 @@ public:
    * If the pathtracer is in RENDER, set the camera focal distance to the vector.
    */
   void autofocus(Vector2D loc);
-
+  void cd_autofocus();
   /**
    * If the pathtracer is in READY, transition to VISUALIZE.
    */
@@ -180,6 +180,7 @@ public:
 
   void visualize_cell() const;
 
+    void visualize_af() const;
   /**
    * Raytrace a tile of the scene and update the frame buffer. Is run
    * in a worker thread.
