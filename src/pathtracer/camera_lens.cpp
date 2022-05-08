@@ -109,7 +109,7 @@ void Camera::initialize_zoom_lens() {
                               x * 238.75,   //back_radius_of_curvature
                               x * -238.75,   //back_sphere_offset
                               1.713);  //back_ior
-    lens_elem_six = new Lens(lens_elem_five->pos - x * (6.11 + (five_six_wide * (1.0 - zoom_index) + five_six_tele * zoom_index)),    //pos
+    lens_elem_six = new Lens(lens_elem_five->pos - x * (6.11 + (five_six_wide * (1.0 - zoom_index) + five_six_tele * zoom_index)), //pos
                              x * 68.0/2.0,    //radius
                              x * 53.35,    //front_radius_of_curvature
                              x * 44.42, //front_sphere_offset

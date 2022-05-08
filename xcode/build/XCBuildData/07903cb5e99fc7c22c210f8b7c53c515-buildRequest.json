@@ -1,0 +1,83 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : false,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d93ee8b4f718e1567ad49efb95365d895e"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9dc63c4dcea6324601dd6acc9e526df36"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9ac24e793f1ac2452f096fcfa30d320b0"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d987fef9b221d270f961cefdfe8bd123d2"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9a753048580ad59d349a766289d11040c"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9a67194979e50ef8cd4355b5d8540a6b3"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9635362a030c1782c812855764c5bf73f"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9b81dd7eb41dfa4b55450dc42439d2000"
+    },
+    {
+      "guid" : "71f0d349e9629bdf350f7c4ae11216d9c67f16d71f3a4aeecb85c9289e58aeb9"
+    }
+  ],
+  "containerPath" : "/Users/alexhao/Desktop/CS184/cs184-final-project/xcode/Assignment3.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "",
+      "buildProductsPath" : "",
+      "derivedDataPath" : "/Users/alexhao/Library/Developer/Xcode/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/alexhao/Library/Developer/Xcode/DerivedData/Assignment3-bxvavlduthagcucxdhazeqpicgdk/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/alexhao/Library/Developer/Xcode/DerivedData/Assignment3-bxvavlduthagcucxdhazeqpicgdk/Index/PrecompiledHeaders",
+      "pchPath" : ""
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

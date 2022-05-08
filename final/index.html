@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Final Project</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+
+<h2 align="middle">CS 184 Final Project | Spring 2022 </h2>
+    <!-- <h3 align="middle">Published at: https://alexhbot.github.io/cs184-final-project/</h3> -->
+
+    <h1 align="middle"> Realistic Lens Simulation </h1>
+    <!-- <p align="middle">Alex Hao</p>
+    <p align="middle">Arthur Yin</p>
+    <p align="middle">Cindy Chen</p>
+    <p align="middle">Hanchen Wang</p> -->
+    <p align="middle">Alex Hao, Arthur Yin, Cindy Chen, Hanchen Wang</p>
+    <br><br>
+    
+    <div>
+
+    <h2 align="middle">Abstract</h2>
+    <p> In cinematography, it is important to simulate a specific lens so that a computer-rendered scene visually matches the real-world scenes shot with the actual lens; this includes matching all optical characteristics of that lens, and the easiest method is to simulate the physical design and ray-trace through the elements. Simulating the optical design is also useful from an engineering standpoint, since it provides insights of the performance of the lens before production. In this project, we used the pathtracer from class to simulate a compound zoom lens based on a real optical design, and augmented it with contrast-detection auto focus capabilities. </p>
+    
+    <p> View the final project video here: <a href="">Video</a> </p>
+    
+    <p> View the presentation slides here: <a href="https://docs.google.com/presentation/d/16gB6LO-A5bKO6mYjfXldND8TPydEmFaUQx0EXOdQ9GY/edit?usp=sharing">Slides</a> </p>
+    
+    <p> View the project repository here: <a href="https://github.com/alexhbot/cs184-final-project">Repo</a> </p>
+
+    <br>
+
+    <h2 align="middle">Part 1: Multi-Element Zoom Lens</h2>
+    
+    <h3>Technical Approach:</h3>
+    
+    <p> We simulted a multi-element zoom lens design from Modern Lens Design by Warren J. Smith, chapter 20.1, figure 20.2. This is a two-component, eight-element, retrofocus type zoom lens, with a zoom ratio of 1.89x. This design has a focal length range of 36mm to 68mm, with a varible aperture of F/3.5 to F/4.5. Below are diagrams of the lens in wide-angle state and telephoto state. As seen here, by moving the four elements in the middle, the focal length of the lens can be changed. </p>
+    
+    <div align="center">
+        <table style="width=100%">
+            <tr>
+                <td>
+                    <td align="middle">
+                    <img src="img/lens_design_wide.jpg" width="480px" />
+                    <figcaption align="middle">Wide-angle configuration</figcaption>
+                </td>
+                <td>
+                    <td align="middle">
+                    <img src="img/lens_design_tele.jpg" width="480px" />
+                    <figcaption align="middle">Telephoto configuration</figcaption>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    
+    <p> The following is an annotated diagram that we used to encode the lens into the pathtracer. </p>
+    <div align="center">
+    <img src="./img/lens_diagram.jpg" width="800px" />
+    <figcaption align="middle">Annotated lens at the wide-angle end</figcaption>
+    </div>
+    
+    <br>
+    
+    <div align="center">
+    <img src="./img/code.png" width="800px" />
+    <figcaption align="middle">Encoding the lens elements</figcaption>
+    </div>
+    
+    <br>
+    
+    <p> Let the element closest to the sensor be element one, and the element closest to object be element eight. Lens zoom is achieved by increasing the distance between elements one and two while decreasing the distance between elements five and six. The magnitude of the change is linearly controlled by zoom_index, a variable between 0 and 1. </p>
+    
+    <p> Since the lens dimensions are in milimeters, but the scenes we are rendering are not, we have to scale down the entire lens structure to maintain the correct relative size between the camera and objects in the scene. This is controlled by parameter scale_camera_to_scene, whose value is set empirically. </p>
+    
+    <p> To ray-trace the lens, we emit a ray from the sensor towards the lens. Since there is no aspherical element, each surface in the lens is modeled as a sphere, and we use the existing framework to intersect the ray with each surface sphere and derive the refracted ray. Any ray that misses the next lens element or hits the lens barrel is ignored and re-sampled. </p>
+    
+    <br>
+    
+    <h3> New data structures: </h3>
+
+    <p> 1. Added a Lens struct in camera.h, which contains all the parameters associated with a single lens element. </p>
+
+    <p> 2. Added lens_elem_one to lens_elem_eight fields to the camera class to keep track of all lens elements of the camera lens. </p>
+
+    <p> 3. Added zoom_index field to the camerea class, which ranges between 0 and 1, with 0 being the wide-angle end and 1 being the telephoto end. </p>
+    
+    <br>
+
+    <h3> New GUI controls: </h3>
+
+    <p> 1. "W" and "T" keys can now zoom the lens wider or tighter, respectively. There are six levels of adjustments. </p>
+    
+    <p> 2. "K" and "L" keys still narrows down and opens up the aperture, respectively, but LensRadius is now limited to between 0 and 1, with 1 being the maximum aperture and 0 being a pinhole model. </p>
+    
+    <p> 3. ";" and " ' " keys still make the lens focus closer and farther, respectively. But since now the AF algorithm and this manual focus controll share the same variable Camera::focalDistance, this input may be overridden by the AF algorithm. </p>
+    
+    <br>
+    
+    <h3>Result Demo:</h3>
+    
+    <p> Here is a short demo of the compression effect that we are now able to achieve. This is done by zooming in while moving the camera backwards to keep composition the same. </p>
+
+    <div align="center">
+    <img src="./img/dragons_demo.gif" width="800px" />
+    </div>
+    
+    <br>
+
+    <h2 align="middle">Part 2: Contrast-Detection Auto Focus</h2>
+    
+    <h3>Technical Approach:</h3>
+    
+    <h3>Result Demo:</h3>
+
+
+    <br>
+
+    <h2 align="middle">References</h2>
+    <p> Smith, Warren J. Modern Lens Design. McGraw-Hill, 2005.  </p>
+    
+    <br>
+    
+    <h2 align="middle">Contributions</h2>
+    <p> Alex Hao and Hanchen Wang worked on part 1 of the project, while Arthur Yin and Cindy Chen worked on part 2 of the project.
+
+</div>
+</body>
+</html>
