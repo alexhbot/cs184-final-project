@@ -620,11 +620,6 @@ void RaytracedRenderer::visualize_af() const {
   glBegin(GL_LINE_LOOP);
   float width_offset = abs(cell_tl.x - cell_br.x) / 5;
   float height_offset = abs((frameBuffer.h-cell_br.y) - (frameBuffer.h-cell_tl.y)) / 5;
-    
-//  glVertex2f(cell_tl.x/2, (frameBuffer.h-cell_br.y)/2);
-//  glVertex2f(cell_br.x/2, (frameBuffer.h-cell_br.y)/2);
-//  glVertex2f(cell_br.x/2, (frameBuffer.h-cell_tl.y)/2);
-//  glVertex2f(cell_tl.x/2, (frameBuffer.h-cell_tl.y)/2);
     glVertex2f(width_offset*2, height_offset*3);
     glVertex2f(width_offset*3, height_offset*3);
     glVertex2f(width_offset*3, height_offset*2);
